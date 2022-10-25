@@ -6,28 +6,44 @@ import { MdOutlineWatchLater } from "react-icons/md"
 import { ClimaProps } from '../../types/types';
 import { getDate, getHors, getTemp } from '../../theme/theme';
 import { useMyContext } from '../../contexts';
+import { useState } from 'react';
+import { ForActions } from '../../contexts/enum';
 
 type Props = {
     clima: ClimaProps | undefined
 }
 
 export const ContentClima = ( { clima }: Props) => {
-    const { state } = useMyContext()
+    const { state, dispatch } = useMyContext()
+    const [value, setvalue] = useState("")
 
     const date = new Date()
 
     const [dia, mes] = getDate(date)
-    const temp = Number(clima?.main.temp.toFixed())
-    const temperatura = getTemp( temp , state.temp)
+    const temperatura = getTemp( Number(clima?.main.temp.toFixed()) , state.temp)
+
+    const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if(e.key === "Enter"){
+            if(value === ""){
+                alert('Digite o nome de uma cidae')
+                return;
+            }
+            dispatch({ type: ForActions.CIDADE, payload: value })
+            setvalue('')
+        }
+    }
 
     return (
         <S.Conteiner cor={state.cor}>
             <S.ConteinerInpult cor={state.cor}>
                 <AiOutlineSearch />
-                <S.Input 
+                <S.Input  
                     type={'text'} 
                     placeholder="Procurar por lugar"
                     cor={state.cor}
+                    onKeyUp={handleKeyUp}
+                    value={value}
+                    onChange={({ target }) => setvalue(target.value)}
                 />
                 <BiMap className='svgMep' />
             </S.ConteinerInpult>
@@ -41,7 +57,7 @@ export const ContentClima = ( { clima }: Props) => {
                         <p>{clima?.name}</p>
                         <img src={`https://countryflagsapi.com/png/${clima?.sys.country}`} alt={`Pais ${clima?.sys.country}`} />
                     </S.Cidade>
-                    <span>{dia}, {mes} {date.getDay()}</span>
+                    <span>{dia}, {mes} {date.getDate()}</span>
                 </S.Date>
                 <S.hora>
                     <S.Estado>

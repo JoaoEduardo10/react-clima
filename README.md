@@ -13,4 +13,4 @@
 - vitest
 
 # Processo
-- Em desemviolvimento....
+- Em desemviolvimento.... falta pouco

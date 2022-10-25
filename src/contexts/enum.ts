@@ -3,5 +3,6 @@ export enum ForActions {
     CIDADE,
     PAGE,
     COR,
-    TEMP
+    TEMP,
+    ERRO
 }

@@ -31,14 +31,22 @@ export const Clima = () => {
         
         const apiClimaUrl = `${apiClima}q=${state.cidade}&units=metric&appid=${apiKey}&lang=pt_br`  
         
-        getApi(apiClimaUrl, setClima)
+        const asy =  async () => {
+            const erro = await getApi(apiClimaUrl, setClima)
 
-    }, [])
+            if(erro){
+                navegate('/erro404')
+            }
+        }
+
+        asy()
+
+    }, [state.cidade])
     
     return (
         <S.Conteiner>
             <ContentClima clima={clima} />
-            <ContentInfo />
+            <ContentInfo clima={clima} />
         </S.Conteiner>
     )
 }

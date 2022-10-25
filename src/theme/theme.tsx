@@ -1,9 +1,11 @@
 import { render } from "@testing-library/react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { AppContext } from "../contexts/"
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom"
+import { AppContext, useMyContext } from "../contexts/"
+import { ForActions } from "../contexts/enum"
 import { GlobalStyle } from "../style/globalStyle"
 
 import { ClimaProps } from "../types/types"
+
 
 export const renderRoutes = (children: any, path: string) => {
     return render(
@@ -19,10 +21,19 @@ export const renderRoutes = (children: any, path: string) => {
 }
 
 export const getApi = async (url: string, setAlgo: React.Dispatch<React.SetStateAction<ClimaProps | undefined>>) => {
+   
+
     const resp = await fetch(url)
+    if(resp.status === 404){
+       return true
+    }
     const data = await resp.json()
 
+
     setAlgo(data)
+
+
+    
 }
 
 export const getDate = (data: Date): string[] => {
@@ -34,7 +45,7 @@ export const getDate = (data: Date): string[] => {
     let newDay: string = ''
     let newDate: string[] = []
 
-    const days = ["Segunda", 'Terça', 'Quarta', 'Quinta', "sexta", "Sabado", "Domingo"]
+    const days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"]
     const months = ['Janeiro', 'Fevereiro', 'Março', "Abril", 'Maio', "Junho", 'Julho', "Agosto", "Setembro", "Outubo", "Novembro", 'Dezembro']
 
     
@@ -43,7 +54,7 @@ export const getDate = (data: Date): string[] => {
     const numberDay = [0, 1, 2, 3, 4, 5, 6]
 
     for(let i = 0; i < days.length; i++) {
-        if(day === numberDay[i]){
+        if(day == numberDay[i]){
             newDay = days[i]
             newDate.push(newDay)
             

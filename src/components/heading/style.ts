@@ -57,6 +57,10 @@ export const ConteinerItens = styled.div`
     border-radius: 1rem 1rem 1rem 1rem;
     cursor: pointer;
 
+    div{
+        padding: .5rem;
+    }
+
     
 `;
 

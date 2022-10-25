@@ -6,4 +6,5 @@ export const data: DataProps = {
     page: 0,
     cor: false,
     temp: false,
+    erro: false,
 }

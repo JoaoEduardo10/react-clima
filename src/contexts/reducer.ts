@@ -17,7 +17,10 @@ export const reducer = (state: DataProps, actions: ActionProps) => {
         }
         case ForActions.TEMP:{
             return {...state, temp: actions.payload}
-        } 
+        }
+        case ForActions.ERRO:{
+            return {...state, erro: actions.payload}
+        }
         default:
     }
 

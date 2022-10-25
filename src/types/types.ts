@@ -6,6 +6,7 @@ export type DataProps = {
     page: number,
     cor: boolean,
     temp: boolean,
+    erro: boolean
 }
 
 export type ActionProps = {
@@ -40,7 +41,6 @@ main: {
     temp_max: number
     pressure: number
     humidity: number
-    visibility: number
 }
 name: string
 wind: {
@@ -59,4 +59,5 @@ sys: {
     timezone: number
     cod: number
 }
+visibility: number
 }

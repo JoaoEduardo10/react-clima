@@ -31,6 +31,7 @@ export const ConteinerInpult = styled.div<{ cor: boolean }>`
 export const Input = styled.input<{ cor: boolean }>`
     padding: 1rem;
     background-color: ${props => props.cor ? "#121212" : "#F3F4F6"};
+    color: ${props => props.cor ? "#fff" : "#000"};
     border: none;
     flex: 1;
     border-radius: 2rem;
@@ -71,6 +72,10 @@ export const Date = styled.div`
     border-bottom: .2rem solid #F3F4F6;
     margin-bottom: 3rem;
 
+    p{
+        font-weight: bold;
+    }
+
     span{
         font-size: 1.5rem;
         width: 100%;
@@ -103,6 +108,7 @@ export const Estado = styled.div`
 
     span{
         font-size: 1.6rem;
+        font-weight: bold;
     }
 `;
 

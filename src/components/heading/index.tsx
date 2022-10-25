@@ -40,14 +40,18 @@ export const Heading = () => {
                     <TbTemperatureFahrenheit/>
                 </S.ConteinerItens>
                 {!state.cor ? 
-                <BsMoon 
-                    onClick={handleClick} 
-                    className='escuro' 
-                /> : 
-                <FiSun 
-                    onClick={handleClick} 
-                    className='claro' 
-                />}
+                <div>
+                    <BsMoon 
+                        onClick={handleClick} 
+                        className='escuro' 
+                    />
+                </div> : 
+                <div>
+                    <FiSun 
+                        onClick={handleClick} 
+                        className='claro' 
+                    />
+                </div>}
             </S.Itens>
         </S.Conteiner>
     )
