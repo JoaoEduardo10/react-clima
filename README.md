@@ -13,4 +13,4 @@
 - vitest
 
 # Processo
-- Em desemviolvimento.... falta pouco
+- Projeto terminado...falta adicionar test
