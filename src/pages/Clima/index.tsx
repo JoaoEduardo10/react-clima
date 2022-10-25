@@ -10,6 +10,7 @@ import { useMyContext } from '../../contexts'
 import { useNavigate } from 'react-router-dom'
 import { ForActions } from '../../contexts/enum'
 import { ClimaProps } from '../../types/types'
+import { Carregando } from '../../components/Carregando'
 
 const apiClima = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_KEY
@@ -45,8 +46,12 @@ export const Clima = () => {
     
     return (
         <S.Conteiner>
-            <ContentClima clima={clima} />
-            <ContentInfo clima={clima} />
+            {!clima && <Carregando />}
+            {clima && 
+            <>
+                <ContentClima clima={clima} />
+                <ContentInfo clima={clima} />
+            </>}
         </S.Conteiner>
     )
 }

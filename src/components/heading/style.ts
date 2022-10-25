@@ -9,6 +9,11 @@ export const Conteiner  = styled.div`
     svg{
         cursor: pointer;
     }
+
+    @media (max-width: 832px) {
+        flex-direction: column;
+        gap: 3rem;
+    }
     
 `;
 

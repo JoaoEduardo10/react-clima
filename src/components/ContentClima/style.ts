@@ -26,6 +26,7 @@ export const ConteinerInpult = styled.div<{ cor: boolean }>`
     .svgMep{
         color: #808080;
     }
+
 `;
 
 export const Input = styled.input<{ cor: boolean }>`
@@ -46,6 +47,11 @@ export const Info = styled.section`
     flex-direction: column;
     padding: 0rem 7rem;
     height: 90%;
+
+    @media (max-width: 832px) {
+        width: 100%;
+        padding: 0 2rem;
+    }
 `;
 
 export const Icon = styled.div`
@@ -54,13 +60,30 @@ export const Icon = styled.div`
     flex-direction: column;
 
     img{
-        max-width: 100%;
+        max-width: 100vw;
     }
 
     P{
         font-size: 7rem;
         font-weight: 100;
     }
+
+    @media (max-width: 832px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        img{
+            min-width: 13rem;
+        }
+
+        p{
+            font-size: 3rem;
+        }
+    }
+
+
 `;
 
 export const Date = styled.div`
@@ -76,10 +99,14 @@ export const Date = styled.div`
         font-weight: bold;
     }
 
-    span{
-        font-size: 1.5rem;
-        width: 100%;
-        display: block;
+    
+
+    @media (max-width: 832px) {
+        span{
+            font-size: 2rem;
+            width: 100%;
+            text-align: center;
+        }
     }
 `;
 
@@ -91,6 +118,7 @@ export const Cidade = styled.div`
     img{
         max-width: 20%;
     }
+
 `;
 
 export const hora = styled.div`
