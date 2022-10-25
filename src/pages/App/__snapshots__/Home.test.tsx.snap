@@ -1,0 +1,237 @@
+// Vitest Snapshot v1
+
+exports[`<Home /> > should render button end input 1`] = `
+.c0 {
+  background: url(/src/img/fundo-clima.jpg);
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  background-image: linear-gradient(140deg,#507BA5,#E4ADA7);
+  width: 60vw;
+  height: 85%;
+  border-radius: .5rem;
+}
+
+.c1 h1 {
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.c1 p {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.c3 {
+  margin-bottom: 3rem;
+}
+
+.c3 span {
+  font-size: 1.8rem;
+  color: #363636;
+}
+
+.c3 p {
+  font-size: 1.5rem;
+}
+
+.c3 p.red {
+  color: red;
+}
+
+.c3 p.withe {
+  color: #fff;
+}
+
+.c4 {
+  display: block;
+  width: 38rem;
+  margin-top: 1.5rem;
+  margin-bottom: .6rem;
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  border: .1rem solid #029b99;
+  outline: none;
+  border-radius: .5rem;
+}
+
+.c4:focus {
+  border: .2rem solid #036564;
+  background-color: #362D3E;
+  color: #fff;
+}
+
+.c5 {
+  width: 20rem;
+  height: 5rem;
+  border-radius: 2rem;
+  border: 1px solid #AE9DB2;
+  box-shadow: .1rem .1rem .5rem #ccc;
+  cursor: pointer;
+  background-color: #372F3E;
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.c5:hover {
+  background-color: #5D323E;
+  color: #fff;
+}
+
+@media (max-width:1075px) {
+  .c1 form {
+    height: 29rem;
+  }
+
+  .c1 label {
+    margin-bottom: .8rem;
+  }
+
+  .c1 label input {
+    margin-bottom: .4rem;
+  }
+
+  .c1 button {
+    height: 40rem;
+  }
+}
+
+@media (max-width:657px) {
+  .c1 {
+    width: 95%;
+  }
+
+  .c1 h1 {
+    font-size: 4.5rem;
+    margin-top: 2rem;
+  }
+
+  .c1 p.description {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5rem 1.4rem;
+  }
+
+  .c1 form {
+    padding: 0 1rem;
+    height: 29.8rem;
+    margin-top: 2rem;
+  }
+
+  .c1 form p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .c1 form label {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .c1 form label span {
+    font-size: 1.4rem;
+  }
+
+  .c1 form label input {
+    width: 100%;
+  }
+
+  .c1 form label button {
+    height: 2rem;
+  }
+}
+
+<div
+  class="c0"
+  role="application"
+>
+  <section
+    class="c1"
+  >
+    <h1>
+      Bem vindo!
+    </h1>
+    <p
+      class="description"
+    >
+      Antes de proceguimos digite seu nome e o nome de sua cidade.
+    </p>
+    <form
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <span>
+          Primeiro nome: 
+        </span>
+        <input
+          class="c4"
+          placeholder="Nome"
+          value=""
+        />
+      </label>
+      <label
+        class="c3"
+      >
+        <span>
+          Nome da sua cidade: 
+        </span>
+        <input
+          class="c4"
+          placeholder="Cidade"
+          value=""
+        />
+        <p
+          class="withe"
+        >
+          Digite o nome da sua cidade Corretamente
+        </p>
+      </label>
+      <button
+        class="c5"
+      >
+        Começar
+      </button>
+    </form>
+  </section>
+</div>
+`;
