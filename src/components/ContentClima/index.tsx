@@ -55,9 +55,9 @@ export const ContentClima = ( { clima }: Props) => {
                 <S.Date>
                     <S.Cidade>
                         <p>{clima?.name}</p>
-                        <img src={`https://countryflagsapi.com/png/${clima?.sys.country}`} alt={`Pais ${clima?.sys.country}`} />
+                        <img src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${clima?.sys.country}.svg`} alt={`Pais ${clima?.sys.country}`} />
                     </S.Cidade>
-                    <span>{dia}, {mes} {date.getDate()}</span>
+                    <span className='horas'>{date.getDate()}/{mes} dia da semana: {dia} </span>
                 </S.Date>
                 <S.hora>
                     <S.Estado>

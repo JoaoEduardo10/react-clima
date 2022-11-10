@@ -99,7 +99,9 @@ export const Date = styled.div`
         font-weight: bold;
     }
 
-    
+    .horas {
+        margin-left: 6rem;
+    }
 
     @media (max-width: 832px) {
         span{
@@ -113,10 +115,11 @@ export const Date = styled.div`
 export const Cidade = styled.div`
     display: flex;
     align-items: center;
-    gap: .4rem;
+    gap: .2rem;
 
     img{
-        max-width: 20%;
+        max-width: 3rem;
+        margin-right: .5rem;
     }
 
 `;
