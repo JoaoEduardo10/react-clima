@@ -10,7 +10,6 @@ import { ForActions } from '../../contexts/enum'
 
 export const Heading = () => {
     const {state, dispatch } = useMyContext()
-    const [boole, setBoole] = useState(false)
     const [tempCelcios] = useState(false)
     const [tempfarenheit] = useState(true)
 
@@ -24,9 +23,13 @@ export const Heading = () => {
     }
 
     const handleClick = () => {
-        setBoole(e => !e)
-
-        dispatch({ type: ForActions.COR, payload: boole })
+        
+        dispatch({ type: ForActions.COR, payload: false })
+        if(!state.cor) {
+            dispatch({ type: ForActions.COR, payload: true })
+        }
+        console.log(state.cor)
+        
     }
 
     return (

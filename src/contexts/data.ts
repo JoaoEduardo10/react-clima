@@ -4,7 +4,7 @@ export const data: DataProps = {
     nome: "",
     cidade: "",
     page: 0,
-    cor: false,
+    cor: true,
     temp: false,
     erro: false,
 }

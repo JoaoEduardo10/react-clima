@@ -49,6 +49,8 @@ export const Form = () => {
         setValueName("")
       }
 
+      const sinal = state.cidade ? '?' : ''
+
     return (
         <S.Form onSubmit={handleSubmit}>
           <S.Label>
@@ -62,7 +64,7 @@ export const Form = () => {
             { erroName && <p className='red'>Prencha o nome!</p> }
           </S.Label>
           <S.Label>
-            <span>Nome da sua cidade: {state.cidade}</span>
+            <span>Nome da sua cidade: {state.cidade}{sinal}</span>
             <S.Input 
               placeholder='Cidade' 
               onChange={({ target }) => setValueCidade(target.value)}

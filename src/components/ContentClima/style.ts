@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Conteiner  = styled.div<{ cor: boolean }>`
     flex: 1;
     background-color: ${props => props.cor ? "#161616" : "#FCFCFC"};
+    height: 72.7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
     color: ${props => props.cor ? "#fff" : "#000"};
 `;
 
@@ -17,6 +17,7 @@ export const ConteinerInpult = styled.div<{ cor: boolean }>`
     align-items: center;
     padding: 0 1rem;
     border-radius: 2rem;
+    margin-top: 2rem;
 
     svg{
         font-size: 2rem;
@@ -45,7 +46,7 @@ export const Info = styled.section`
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    padding: 0rem 7rem;
+    padding: 3rem 0rem;
     height: 90%;
 
     @media (max-width: 832px) {
@@ -94,6 +95,7 @@ export const Date = styled.div`
     padding: 1rem 0;
     border-bottom: .2rem solid #F3F4F6;
     margin-bottom: 3rem;
+    flex: 1;
 
     p{
         font-weight: bold;
@@ -106,7 +108,7 @@ export const Date = styled.div`
     @media (max-width: 832px) {
         span{
             font-size: 2rem;
-            width: 100%;
+            flex: 1;
             text-align: center;
         }
     }
@@ -114,8 +116,13 @@ export const Date = styled.div`
 
 export const Cidade = styled.div`
     display: flex;
+    flex: 1;
     align-items: center;
     gap: .2rem;
+    
+    @media (max-width: 832px) {
+        flex: 1;
+    }
 
     img{
         max-width: 3rem;
@@ -128,6 +135,11 @@ export const hora = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    @media (max-width: 832px) {
+        margin-bottom: 3rem;
+    }
+    
 `;
 
 export const Estado = styled.div`
